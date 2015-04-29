@@ -44,7 +44,7 @@ end
 # For now we resolve it by using an older version of the cert. This only works
 # if you have this version of the CA bundle stored via S3 caching (which Chef
 # Software does).
-override :cacerts, version: '2014.08.20'
+#override :cacerts, version: '2014.08.20'
 
 # Uncomment to pin the chef version
 # override :chef,           version: "12.3.0"
