@@ -68,12 +68,13 @@
       
       <Directory Id="ProgramMenuFolder">
         <Component Id="StartMenuShortcut" Guid="{6DD3FFF3-E009-40E7-B1C2-EF606B941CCD}">
-            <Shortcut Id="StartMenuShortcutDef" 
-                      Name="!(loc.ChefDkStartMenuShortcutDefName)"
-                      Description="!(loc.ChefDkStartMenuShortcutDefDescription)"
-                      Target="[#StartChefDkScript]"/>
+          <Shortcut Id="StartMenuShortcutDef" 
+                    Name="!(loc.ChefDkShortcutDefName)"
+                    Description="!(loc.ChefDkShortcutDefDescription)"
+                    Target="[#StartChefDkScript]"/>
         </Component>
       </Directory>
+      
     </Directory>
 
     <!-- Set the components defined in our fragment files that will be used for our feature  -->
@@ -82,10 +83,10 @@
       <ComponentRef Id="ChefDkPath" />
       <ComponentRef Id="ChefPSModuleFile" />
       <ComponentRef Id="ChefPSModulePath" />
+      <ComponentRef Id="StartChefDk" />
     </Feature>
 
     <Feature Id="ChefDkStartMenuShortcutFeature" Title="!(loc.FeatureChefDkStartMenuShortcut)" Description="!(loc.FeatureChefDkStartMenuShortcutDescription)" Level="1" AllowAdvertise="no" >
-      <ComponentRef Id="StartChefDk" />
       <ComponentRef Id="StartMenuShortcut" />
     </Feature>
  
